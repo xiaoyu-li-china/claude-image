@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "defaultPresetId": "balanced",
+  "constraints": {
+    "raymarchSteps": {
+      "type": "integer",
+      "min": 1,
+      "description": "Raymarching 步进数，必须为正整数"
+    },
+    "resolutionScale": {
+      "type": "number",
+      "minExclusive": 0,
+      "max": 1,
+      "description": "内部渲染分辨率相对画布像素的缩放，必须属于 (0, 1]"
+    }
+  },
+  "presets": [
+    {
+      "id": "smooth",
+      "label": "流畅 smooth",
+      "raymarchSteps": 48,
+      "resolutionScale": 0.67
+    },
+    {
+      "id": "balanced",
+      "label": "均衡 balanced",
+      "raymarchSteps": 96,
+      "resolutionScale": 1.0
+    },
+    {
+      "id": "ultra",
+      "label": "极致 ultra",
+      "raymarchSteps": 160,
+      "resolutionScale": 1.0
+    }
+  ]
+}
